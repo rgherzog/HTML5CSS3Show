@@ -1,0 +1,140 @@
+﻿@charset 'utf-8';
+
+div.redRectangle {
+    border: 1px solid red;
+    background-color: #ddd;
+    width: 100px;
+    height: 50px;
+    float: right;
+    text-align: center;
+}
+div.redRectangleGreater {
+    width: 250px;
+    height: 100px;
+    border: 5px dotted red;
+}
+
+div.rotate {
+    transform:rotate(30deg);
+    -ms-transform:rotate(30deg); /* IE 9 */
+    -webkit-transform:rotate(30deg); /* Safari and Chrome */
+}
+
+div.translate {
+    transform: translate(50px,100px);
+    -ms-transform: translate(50px,100px); /* IE 9 */
+    -webkit-transform: translate(50px,100px); /* Safari and Chrome */
+}
+
+div.scale
+{
+    transform: scale(2,4);
+    -ms-transform: scale(2,4); /* IE 9 */
+    -webkit-transform: scale(2,4); /* Safari and Chrome */
+}
+
+div.rotatexy {
+    transform: rotateX(120deg);
+    -webkit-transform: rotateX(120deg); /* Safari and Chrome */
+    transform: rotateY(130deg);
+    -webkit-transform: rotateY(130deg); /* Safari and Chrome */
+}
+
+div#transitions {
+    transition: width 2s, height 2s, transform 2s;
+    -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+}
+div.transitions {
+    width:200px;
+    height:70px;
+    transform: rotateY(180deg);
+}
+
+@keyframes myKeyFrames{
+    from {
+        background: #ddd;
+    }
+
+    to {
+        background: red;
+        transform: translateY(-200px) rotate(180deg);
+        border-radius: 30px;
+        
+    }
+}
+@-webkit-keyframes myKeyFrames { /* Safari and Chrome */
+    from {
+        background: #ddd;
+
+    }
+
+    to {
+        background: red;
+    }
+}
+
+div.animation {    
+    animation-name: myKeyFrames;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+    animation-timing-function: cubic-bezier(0.1, 0.4, 0.7, 1);
+}
+
+div.multipleColumns {
+    -moz-column-count:3; /* Firefox */
+    -webkit-column-count:3; /* Safari and Chrome */
+    column-count:3;
+
+    -moz-column-gap:40px; /* Firefox */
+    -webkit-column-gap:40px; /* Safari and Chrome */
+    column-gap:40px;
+
+    -moz-column-rule:3px outset #ff00ff; /* Firefox */
+    -webkit-column-rule:3px outset #ff00ff; /* Safari and Chrome */
+    column-rule:3px outset #ff00ff;
+}
+
+div.resize {
+    resize:both;
+    overflow:auto;
+}
+
+div.roundedCorners {
+    border-radius: 10px;
+}
+div.background {
+    background: url(../Content/images/reinhart-glatze.jpg);
+    background-repeat: no-repeat;
+    background-size: 100px;
+    padding: 10px;
+}
+
+div.backgroundSize {       
+    background-size: 200px;
+}
+
+div.backgroundOrigin {
+    background-origin: border-box;
+}
+
+div.multipleBackgroundImages {
+    background:url(../Content/images/reinhart-glatze.jpg), url(../Content/images/Silvesterrudern.png);
+    background-repeat: no-repeat;
+}
+
+div.textShadow {
+    text-shadow: 5px 5px 5px #f00;
+}
+
+@font-face {
+    font-family: myFont;
+    src: url(../Content/fonts/Quicksand_Light.otf);    
+}
+
+div.fontFace {
+    font-family: myFont;
+    font-size: 20px;
+}

@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Audio, Video, Canvas</title>
+        <link rel="stylesheet" href="Styles/Site.css" media="screen" />
+    </head>
+    <body>
+        <header>
+            <h1>
+                Audio, Video, Canvas
+            </h1>
+        </header>
+        <article>
+            <section>
+                <h1>Audio</h1>
+                <audio controls loop>
+                    <source src="Content/audio/lightsaber_01.mp3" />
+                    <source src="Content/audio/lightsaber_01.wav" />
+                    This browser does not support HTML5 audio
+                </audio>
+                <audio autoplay controls loop>
+                    <source src="Content/audio/donner.mp3" />
+                </audio>
+            </section>
+            <section>
+                <h1>Video</h1>
+                <video autoplay controls loop width="1000" height="1000">
+                    <source src="Content/video/countdown.mp4" />
+                    This browser does not support HTML5 video
+                </video>
+            </section>
+            <section>
+                <h1>Canvas</h1>
+                <canvas id="demoCanvas" width="500" height="400">
+
+                    This browser does not support HTML5 canvas
+                </canvas>
+                <script>
+                    (function(){
+                        var demoCanvas = document.getElementById('demoCanvas');
+                        var ctx = demoCanvas.getContext("2d");
+                        ctx.fillStyle = "rgb(0, 0, 255)";
+                        ctx.fillRect(30, 30, 100, 100);
+                        ctx.fillStyle = "rgb(255, 0, 0)";
+                        ctx.arc(100, 100, 30, 0, 2 * Math.PI, true);
+                        ctx.fill();
+                    })();
+                </script>
+            </section>
+        </article>
+    </body>
+</html>

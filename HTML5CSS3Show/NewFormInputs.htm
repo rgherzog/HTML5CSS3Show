@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>New Form Inputs</title>
+        <link rel="stylesheet" href="Styles/Site.css" media="screen" />
+        <link href="Styles/NewFormInputs.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <h1>
+                New Form Inputs
+            </h1>
+        </header>
+        <article>
+            <section>
+                <h1>New Form Inputs</h1>
+                <form>
+                    <input type="text" name="demo" autofocus required placeholder="name" title="name"/>
+                    <br />
+                    <input type="email" name="email" required placeholder="reinhart_herzog@yahoo.de" title="Your Email Address"/>
+                    <br />
+                    <input type="url" name="url" placeholder="http://www.domain.com" title="Enter a URL"/>
+                    <br />
+                    <meter id="meterOfDayInMonth" min="1" max="31" value="5">5th Day in Month</meter>
+                    <br />
+                    <input type="text" name="telephone" placeholder="(+43) ### ####" pattern="(\+\d\d) 664 \d\d\d\d\d\d\d" title="(+43) ### ####"/>
+                    <br />
+                    <input type="range" min="0" max="10" value="4" />
+                    <input type="submit" />
+                </form>
+            </section>
+        </article>
+    </body>
+</html>

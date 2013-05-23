@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Video and Canvas</title>
+        <link rel="stylesheet" href="Styles/Site.css" media="screen" />
+        <link href="Styles/CanvasVideo.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript"></script>
+        <script src="Scripts/CanvasCircles/behaviour.js"></script>
+        <script src="Scripts/CanvasCircles/Circle.js"></script>
+        <script src="Scripts/CanvasCircles/Colour.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>
+                Video and Canvas
+            </h1>
+        </header>
+        <article>
+            <section>
+                <h1>Video and Canvas</h1>
+                <figure>                    
+                    <video width="600" height="300" autoplay >
+                        <source src="Content/video/countdown.mp4"/>
+                        This browser does not support HTML5 video
+                    </video>
+                    <canvas id="canvas" width="600" height="300">
+                        <div id="canvasFallback"><div style="font-size: xx-large">This browser does not support HTML5 canvas</div></div>
+                    </canvas>
+                    <audio id="music"></audio>
+                    <figcaption id="caption">TWEAK THE EXPERIENCE</figcaption>
+                </figure>
+            </section>
+        </article>
+    </body>
+</html>

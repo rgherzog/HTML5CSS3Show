@@ -1,0 +1,9 @@
+﻿@charset 'utf-8';
+
+canvas, video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -300px;
+}
