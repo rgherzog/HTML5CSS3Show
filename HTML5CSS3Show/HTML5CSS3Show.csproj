@@ -53,6 +53,8 @@
     <Content Include="Content\images\Silvesterrudern.png" />
     <Content Include="Content\video\countdown.mp4" />
     <Content Include="CanvasVideo.htm" />
+    <Content Include="LocalStorage.htm" />
+    <Content Include="Geolocation.htm" />
     <Content Include="NewFormInputs.htm" />
     <Content Include="CSS3.htm" />
     <Content Include="default.htm" />
@@ -62,7 +64,10 @@
     <Content Include="Scripts\CanvasCircles\Circle.js" />
     <Content Include="Scripts\CanvasCircles\Colour.js" />
     <Content Include="Scripts\css3.js" />
+    <Content Include="Scripts\HTML5.js" />
+    <Content Include="Scripts\LocalStorage.js" />
     <Content Include="Styles\CSS3Features.css" />
+    <Content Include="Styles\LocalStorage.css" />
     <Content Include="Styles\NewFormInputs.css" />
     <Content Include="Styles\Site.css" />
     <Content Include="Web.config" />
@@ -100,7 +105,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>13329</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:1660/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

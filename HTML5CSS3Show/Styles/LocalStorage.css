@@ -1,0 +1,30 @@
+﻿fieldset > label {
+    font-weight: bold;
+    font-size: 130%;
+}
+
+.msg {
+    font-size: 150%;
+    color: red;
+    font-weight: bold;
+}
+
+header > div{
+    font-size: 14px;
+    color: white;
+}
+
+.floatLeft{
+    margin: 5px;
+    float: left;
+}
+
+.containerBelow{
+    width: 500px;
+    clear: left;
+}
+
+.containerBelow > textarea {
+    width: 600px;
+    height: 300px;
+}

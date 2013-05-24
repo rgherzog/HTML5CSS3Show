@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>New Form Inputs</title>
+        <link rel="stylesheet" href="Styles/Site.css" media="screen" />        
+        <link href="Styles/LocalStorage.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript"></script>
+        <script src="Scripts/LocalStorage.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>
+                Local Storage
+            </h1>
+            <div>
+                Works basically like cookies. Processing is done solely on the client. 
+                The Local Storage can have a size of 1 - 10MB. It is not transferred to the server on each request.
+            </div>
+        </header>
+        <article>
+            <section>
+                <div>
+                    <div class="floatLeft">
+                        <div>Show Events</div>
+                        <input id="CheckboxShowEvents" type="checkbox" checked/>
+                    </div>
+                    <div class="floatLeft">
+                        <div>Handling Storage limits</div>
+                        <input id="buttonStorageLimitStart" type="button" value="start"/>
+                        <input id="buttonStorageLimitStop" type="button"/ value="stop">
+                    </div>
+                </div>
+                <br />
+                <br />
+                <div class="containerBelow" >
+                    <input type="button" id="saveButton" value="Save"/>
+                    <input type="button" id="deleteButton" value="Delete" />
+                    <br />
+                    <br />
+                    <textarea id="taskBox" autofocus></textarea>
+                    <div id="msgContainer"></div>                    
+                    <br /><br />
+                    <div id="errorList"></div>
+                    <br /><br />
+                    <div id="fsContainer">
+                        <fieldset id ='fieldset'>
+                            <legend>Shows how events work</legend>
+                            <label for='eveKey'>Key</label>
+                            <p id='eveKey'></p>
+                            <label for='eveNewVal'>New Value</label>
+                            <p id='eveNewVal'></p>
+                            <label for='eveOldVal'>Old Value</label>
+                            <p id='eveOldVal'></p>
+                            <label for='url'>Url</label>
+                            <p id='url'></p>
+                        </fieldset>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </body>    
+</html>
