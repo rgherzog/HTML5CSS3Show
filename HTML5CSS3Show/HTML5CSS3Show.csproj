@@ -53,6 +53,11 @@
     <Content Include="Content\images\Silvesterrudern.png" />
     <Content Include="Content\video\countdown.mp4" />
     <Content Include="CanvasVideo.htm" />
+    <Content Include="Scripts\WebWorker.js" />
+    <Content Include="Scripts\WebWorkerBackground.js" />
+    <Content Include="Scripts\WebWorkerFibonacci.js" />
+    <Content Include="Styles\WebWorker.css" />
+    <Content Include="WebWorker.htm" />
     <Content Include="LocalStorage.htm" />
     <Content Include="Geolocation.htm" />
     <Content Include="NewFormInputs.htm" />

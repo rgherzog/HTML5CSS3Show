@@ -413,3 +413,9 @@ section#menu div {
 ::selection {
     background-color: rgba(12,12,12, 0.5);
 }
+
+
+header > div{
+    font-size: 14px;
+    color: white;
+}

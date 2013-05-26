@@ -9,11 +9,6 @@
     font-weight: bold;
 }
 
-header > div{
-    font-size: 14px;
-    color: white;
-}
-
 .floatLeft{
     margin: 5px;
     float: left;
