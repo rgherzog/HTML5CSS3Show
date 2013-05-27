@@ -1,0 +1,18 @@
+﻿ol#log {
+    border: 3px solid darkgray;
+    width: 250px;
+}
+
+ol#log > li:not(:last-child), ol#fibContainerWorker > li:not(:last-child){
+    border-bottom: 3px solid darkgray;
+    border-left: 3px solid darkgray;
+}
+
+ol#log > li:last-child, ol#fibContainerWorker > li:last-child {
+    border-left: 3px solid darkgray;
+}
+
+article > section{
+    float: left;
+    margin: 20px;
+}

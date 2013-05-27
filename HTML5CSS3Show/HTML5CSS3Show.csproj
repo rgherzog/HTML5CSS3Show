@@ -55,6 +55,9 @@
     <Content Include="Content\images\Silvesterrudern.png" />
     <Content Include="Content\video\countdown.mp4" />
     <Content Include="CanvasVideo.htm" />
+    <Content Include="Scripts\WebSocket.js" />
+    <Content Include="Styles\WebSocket.css" />
+    <Content Include="WebSockets.htm" />
     <Content Include="Scripts\demo_workers.js" />
     <Content Include="Scripts\WebWorker.js" />
     <Content Include="Scripts\WebWorkerBackground.js" />
