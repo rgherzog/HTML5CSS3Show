@@ -1,6 +1,6 @@
 ﻿ol#fibContainer, ol#fibContainerWorker {
     border: 3px solid darkgray;
-    width: 200px;
+    width: 250px;
 }
 
 ol#fibContainer > li:not(:last-child), ol#fibContainerWorker > li:not(:last-child){

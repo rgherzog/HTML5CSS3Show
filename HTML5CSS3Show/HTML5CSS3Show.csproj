@@ -49,10 +49,13 @@
     <Content Include="Content\audio\lightsaber_01.wav" />
     <Content Include="Content\audio\lightsaber_01.mp3" />
     <Content Include="Content\audio\schwingung.mp3" />
+    <Content Include="Content\images\loading2.gif" />
+    <Content Include="Content\images\loading5.gif" />
     <Content Include="Content\images\reinhart-glatze.jpg" />
     <Content Include="Content\images\Silvesterrudern.png" />
     <Content Include="Content\video\countdown.mp4" />
     <Content Include="CanvasVideo.htm" />
+    <Content Include="Scripts\demo_workers.js" />
     <Content Include="Scripts\WebWorker.js" />
     <Content Include="Scripts\WebWorkerBackground.js" />
     <Content Include="Scripts\WebWorkerFibonacci.js" />
@@ -108,7 +111,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>13329</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
