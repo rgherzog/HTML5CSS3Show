@@ -1,4 +1,4 @@
-﻿ol#fibContainer, ol#fibContainerWorker {
+﻿ol#fibContainer, ol#fibContainerWorker, ol#ajaxContainerWorker, ol#result {
     border: 3px solid darkgray;
     width: 250px;
 }
@@ -15,4 +15,8 @@ ol#fibContainer > li:last-child, ol#fibContainerWorker > li:last-child {
 article > section{
     float: left;
     margin: 20px;
+}
+
+ol#ajaxContainerWorker, ol#result {
+    list-style: none;
 }

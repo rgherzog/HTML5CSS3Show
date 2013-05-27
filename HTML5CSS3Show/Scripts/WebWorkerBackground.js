@@ -17,8 +17,8 @@ function calculateNextFibonacciValue(n) {
 }
 
 function messageHandler(e) {
-    if (e.data > 0) {
-        generateFibonacciSeries(e.data);
+    if (e.data.Count > 0) {
+        generateFibonacciSeries(e.data.Count);
     }
 }
 
@@ -26,8 +26,9 @@ function generateFibonacciSeries(count) {
     for (var i = 0; i < count; i++) {
         result.push(calculateNextFibonacciValue(i));
     }
-
-    postMessage(result);
+    var args = { Comman: "start", Count: "", Result: "" };
+    args.Result = result;
+    postMessage(args);
 }
 
 addEventListener("message", messageHandler, true);

@@ -31,6 +31,7 @@
                 <h1>With WebWorker</h1>
                 <input type="number" id="fibCountWorker" min="2" max="5000" value="25" />
                 <input type="button" id="buttonStartWorker" value="generate" autofocus/>
+                <input type="button" id="buttonStopWorker" value="stop" autofocus/>
                 <img id="loadImgWorker" src="Content/images/loading5.gif" width="15"/>
                 <ol id="fibContainerWorker">
 
@@ -38,9 +39,19 @@
             </section>
             <section>
                 <h1>Another WebWorker</h1>
-                <p>Count numbers: <output id="result"></output></p>
                 <button onclick="startWorker()">Start Worker</button> 
                 <button onclick="stopWorker()">Stop Worker</button>
+                <ol id="result">
+
+                </ol>
+            </section>
+            <section>
+                <h1>With WebWorker that uses Ajax</h1>
+                <input type="button" id="buttonStartAjax" value="generate" autofocus/>
+                <img id="loadImgWorkerAjax" src="Content/images/loading5.gif" width="15"/>
+                <ol id="ajaxContainerWorker">
+
+                </ol>
             </section>
         </article>
     </body>    
@@ -53,7 +64,7 @@
                     w = new Worker("Scripts/demo_workers.js");
                 }
                 w.onmessage = function (event) {
-                    document.getElementById("result").innerHTML = event.data;
+                    document.getElementById("result").innerHTML = "<li>"+event.data+"</li>";
                 };
             }
             else {

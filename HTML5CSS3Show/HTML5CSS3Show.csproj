@@ -58,8 +58,10 @@
     <Content Include="Scripts\demo_workers.js" />
     <Content Include="Scripts\WebWorker.js" />
     <Content Include="Scripts\WebWorkerBackground.js" />
+    <Content Include="Scripts\WebWorkerBackgroundAjax.js" />
     <Content Include="Scripts\WebWorkerFibonacci.js" />
     <Content Include="Styles\WebWorker.css" />
+    <Content Include="test.htm" />
     <Content Include="WebWorker.htm" />
     <Content Include="LocalStorage.htm" />
     <Content Include="Geolocation.htm" />

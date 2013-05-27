@@ -1,7 +1,35 @@
-﻿$(function () {
-    //WebWorker
+﻿//AjaxWorker (calling the working works identically but the worker itself uses a ajax call)
+$(function () {
+    var loadImg = $("#loadImgWorkerAjax");
+    var fibContainerWorker = $("#ajaxContainerWorker");
+    var worker;
+    loadImg.hide();
+
+    $("#buttonStartAjax").click(function () {
+        fibContainerWorker.html("");
+        loadImg.show();
+
+        worker = new Worker("Scripts/WebWorkerBackgroundAjax.js");
+        worker.onmessage = messageHandler;
+        worker.onerror = errorHandler;
+        worker.postMessage("start");
+    });
+
+    function messageHandler(e) {
+        logMessage(fibContainerWorker, e.data);
+        loadImg.hide();
+    }
+
+    function errorHandler(e) {
+        logMessage(fibContainerWorker, e.message)
+    }    
+});
+
+//WebWorker
+$(function () {
     var fibContainerWorker = $("#fibContainerWorker");
     var worker;
+    var args = { Comman: "start", Count: "", Result: "" }; //A JSON object is not necessary. I am just using it in order to demonstrate that using JSON objects is possible as well.
     var loadImg = $("#loadImgWorker");
     loadImg.hide();
 
@@ -11,14 +39,20 @@
         fibContainerWorker.html("");
         loadImg.show();
 
-        var worker = new Worker("Scripts/WebWorkerBackground.js");
-        worker.onmessage = messageHandler;
-        worker.onerror = errorHandler;
-        worker.postMessage(count);
+        var worker = getWebWorker();
+        args.Count = count;
+        worker.postMessage(args);
     });
 
+    $("#buttonStopWorker").click(function () {
+        var worker = getWebWorker();
+        worker.terminate();
+        loadImg.hide();
+    });
+
+
     function messageHandler(e) {
-        var results = e.data;
+        var results = e.data.Result;
         $.each(results, function () {
             logMessage(fibContainerWorker, this);
         });
@@ -27,6 +61,15 @@
     
     function errorHandler(e) {
         logMessage(fibContainerWorker, e.message)
+    }
+
+    function getWebWorker() {
+        if (worker == null) {
+            worker = new Worker("Scripts/WebWorkerBackground.js");
+            worker.onmessage = messageHandler;
+            worker.onerror = errorHandler;
+        }
+        return worker;
     }
 });
 
