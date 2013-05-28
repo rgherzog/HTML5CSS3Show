@@ -40,6 +40,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\audio\beach-wave-01.mp3" />
@@ -55,7 +59,12 @@
     <Content Include="Content\images\Silvesterrudern.png" />
     <Content Include="Content\video\countdown.mp4" />
     <Content Include="CanvasVideo.htm" />
+    <Content Include="offlineApplication\journal.aspx" />
+    <Content Include="offlineApplication\fallback.aspx" />
+    <Content Include="offlineApplication\manifest.aspx" />
+    <Content Include="Scripts\jquery-1.10.0.min.js" />
     <Content Include="Scripts\WebSocket.js" />
+    <Content Include="Styles\OfflineApplication.css" />
     <Content Include="Styles\WebSocket.css" />
     <Content Include="WebSockets.htm" />
     <Content Include="Scripts\demo_workers.js" />
@@ -86,6 +95,27 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="offlineApplication\journal.aspx.cs">
+      <DependentUpon>journal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="offlineApplication\journal.aspx.designer.cs">
+      <DependentUpon>journal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="offlineApplication\fallback.aspx.cs">
+      <DependentUpon>fallback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="offlineApplication\fallback.aspx.designer.cs">
+      <DependentUpon>fallback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="offlineApplication\manifest.aspx.cs">
+      <DependentUpon>manifest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="offlineApplication\manifest.aspx.designer.cs">
+      <DependentUpon>manifest.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Styles\CanvasVideo.css" />
   </ItemGroup>

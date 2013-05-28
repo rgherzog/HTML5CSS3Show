@@ -115,6 +115,7 @@ article
     padding: 0px 12px;
     margin: 12px 8px 8px 8px;
     min-height: 420px;
+    position: relative;
 }
 
 article h1
@@ -364,23 +365,23 @@ section#menu a {
     text-decoration:none;
 }
 
-section#menu div {
-    width: 300px;
-    border: 2px solid grey;
-    margin: 10px auto;
-    padding: 5px;
-    cursor: pointer;
-    /*background-color: #ccc;*/
-    box-shadow: 5px 5px 8px rgba(123,123,123, 0.5);   
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    font-weight: bold; 
-
-    background: -ms-linear-gradient(top,  #1e5799 0%, #7db9e8 100%);
-    background: -moz-linear-gradient(top,  #1e5799 0%, #7db9e8 100%);
-    background: -webkit-linear-gradient(top,  #1e5799 0%, #7db9e8 100%);    
-}
+    section#menu div {
+        width: 300px;
+        border: 2px solid grey;
+        margin: 10px auto;
+        padding: 5px;
+        cursor: pointer;
+        /*background-color: #ccc;*/
+        -webkit-box-shadow: 5px 5px 8px rgba(123,123,123, 0.5);
+        box-shadow: 5px 5px 8px rgba(123,123,123, 0.5);
+        border-radius: 5px;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        background: -ms-linear-gradient(top, #1e5799 0%, #7db9e8 100%);
+        background: -moz-linear-gradient(top, #1e5799 0%, #7db9e8 100%);
+        background: -webkit-linear-gradient(top, #1e5799 0%, #7db9e8 100%);
+    }
 
     section#menu div:first-letter {
         font-size: 150%;        
