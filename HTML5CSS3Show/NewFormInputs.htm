@@ -2,37 +2,194 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>New Form Inputs</title>
+        <title>New Form Inputs and Custom Validation</title>
         <link rel="stylesheet" href="Styles/Site.css" media="screen" />
         <link href="Styles/NewFormInputs.css" rel="stylesheet" />
+        <script src="Scripts/jquery-1.10.0.min.js"></script>
     </head>
     <body>
         <header>
-            <h1>
-                New Form Inputs
-            </h1>
+            <hgroup>
+                <h1>
+                    New Form Inputs and Custom Validation
+                </h1>
+                <h2>Works best in Chrome: 2013-05-29. Especially the custom error messages are automatically displayed in chrome. Whereas Internet Explorer doesn't do that and so the the solution in the right column is more appropriate.</h2>
+            </hgroup>
+            <div>
+                On the left side you can see what kind of validation can be done with HTML5 and CSS3 only - css pseudo classes and adjacent elements are the key. The validation in the right columns work in the same way as the validation in left colum. Additionally we introduce a custom validation that is done in JavaScript. So a more finegrained validation is possible. The messages are more finegrained in terms of not just saying: "Your are doing something wrong - do it that way". We can tell the user what is actuelly wrong.
+            </div>
         </header>
         <article>
-            <section>
-                <h1>New Form Inputs</h1>
+            <section class="floatLeft">
+                <h1>Standard validation without JavaScript</h1>
                 <form>
-                    <input type="text" name="demo" autofocus required placeholder="name" title="name"/>
-                    <br />
-                    <input type="email" name="email" required placeholder="reinhart_herzog@yahoo.de" title="Your Email Address"/>
-                    <br />
-                    <input type="url" name="url" placeholder="http://www.domain.com" title="Enter a URL"/>
-                    <br />
-                    <meter id="meterOfDayInMonth" min="1" max="31" value="5">5th Day in Month</meter>
-                    <br />
-                    <input type="text" name="telephone" placeholder="#######" pattern="\d\d\d\d\d\d\d" title="#######"/>
-                    <br />
-                    <input type="range" min="0" max="10" value="4" />
-                    <br />
-                    <input type="number" min="0" max="30" />
-                    <br />
-                    <input type="submit" />
+                    <fieldset>
+                        <legend>Here we use standard HTML Validation attributes with CSS</legend>
+                        <label for="name" class="floatLeft">Text with pattern</label>
+                        <input type="text" class="floatRight" name="name" autofocus required placeholder="Firstname Lastname" pattern="[\w]{5,}\s[\w]{5,}" title="Fristname Lastname" value="reinhart herzog"/>
+                        <span class="invalid">Enter your firstname and lastname. Each of which consists of at least 5 characters. Firstname and lastname must be seperated by a blank.</span>
+                        <br />
+                        <label for="emailpattern" class="floatLeft clear">Email with pattern</label>
+                        <input type="email" class="floatRight" name="emailpattern" required placeholder="reinhart_herzog@yahoo.de" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}" title="charactersNumbers@yourDomain.com" value="asdf@asd.at"/>
+                        <span class="invalid">You must enter a valid email address. Your email adress must not contain any special characters. The following characters are allowed: . _ - +</span>
+                        <br />
+                        <label for="email" class="floatLeft clear">Email without pattern</label>
+                        <input type="email" class="floatRight" name="email" required placeholder="reinhart_herzog@yahoo.de" title="charactersNumbers@yourDomain.com" value="asdf@asd.at"/>
+                        <span class="invalid">You must enter a valid email address. Your email adress must not contain any special characters. The following characters are allowed: . _ - +</span>
+                        <br />
+                        <label for="url" class="floatLeft clear">Url</label>
+                        <input type="url" class="floatRight" name="url" placeholder="http://www.domain.com" title="Enter a URL" value="http://test.at"/>
+                        <span class="invalid">You must enter a URL that begins with http://</span>
+                        <br />
+                        <label for="meter" class="floatLeft clear">Meter</label>
+                        <meter id="meter" class="floatRight" min="1" max="31" value="5">5th Day in Month</meter>
+                        <br />
+                        <label for="telephone" class="floatLeft clear">Text with Pattern</label>
+                        <input type="text" class="floatRight" name="telephone" placeholder="0664 4308641" pattern="[\d\s]{5,}" title="Enter your telephone number which should look like that 0664 4308641 or that 0043 0664 4308641 - don't use + or / or -"/>
+                        <span class="invalid">You must enter a telephone number that consists of numbers and whitespaces like 0664 4308641 or 0043 664 4308641 - don't use a # or () or -</span>
+                        <br />
+                        <label for="myrange" class="floatLeft clear">Range</label>
+                        <input id="myrange" name="myrange" type="range" class="floatRight" min="0" max="10" value="4" />                        
+                        <br />
+                        <label for="myNumber" class="floatLeft clear">Number input</label>
+                        <input type="number" class="floatRight" name=myNumber min="0" max="30" title="Enter a number between 0 and 30 here"/>
+                        <span class="invalid">You must enter a number between 0 and 30 - alphabetic characters are not allows</span>
+                        <br />
+                        <label for="color" class="floatLeft clear">Colors</label>
+                        <input type="color" class="floatRight" name="color" title="Chose from the available colors" />
+                        <br />
+                        <label for="datalist" class="floatLeft clear">DataList (double click into the field)</label>
+                        <input type="text" list="datalist" class="floatRight" name="datalist" title="Chose from the available colors"/>
+                        <datalist id="datalist">
+                            <option value="small" />
+                            <option value="medium" />
+                            <option value="large" />
+                        </datalist>
+                        <br />
+                        <label for="date" class="floatLeft clear">Date</label>
+                        <input type="date" class="floatRight" name="date" title="Enter a Date"/>
+                        <br />
+                        <label for="datetime-locl" class="floatLeft clear">Datetime</label>
+                        <input type="datetime-local" class="floatRight" name="datetime-local" title="Enter a Date"/>               
+                        <br />
+                        <label for="date" class="floatLeft clear">Date</label>
+                        <input type="date" class="floatRight" name="date" title="Enter a Date"/>
+                        <br />
+                        <input type="submit" class="floatRight clear"/>
+                    </fieldset>
+                </form>
+            </section>
+            <section class="floatLeft">
+                <h1>New Form Inputs with JavaScript</h1>
+                <form id="customErrorForm">                    
+                    <fieldset id ="customErrorFieldset">
+                        <legend>Here we use the same as above plus some JavaScript</legend>
+                        <label for="name2" class="floatLeft clear">Firstname</label>
+                        <input type="text" id="name2" name="name2" class="floatRight" autofocus required placeholder="Firstname Lastname" pattern="[\w]{5,}\s[\w]{5,}" title="Fristname Lastname" value="reinhart herzog" maxlength="20"/>
+                        <span id="name2Rules" class="rules">
+                            <span class="patternMismatch vmsg none">Enter your firstname and lastname. Each of which consists of at least 5 characters. Firstname and lastname must be seperated by a blank.</span>
+                        </span>
+                        <br />
+                        <label for="email" class="floatLeft clear">Email (try a yahoo email)</label>
+                        <input type="email" id="email2" name="email2" class="floatRight" required placeholder="reinhart_herzog@yahoo.de" title="Enter your Email Address" value="asdf@asd.at"/>
+                        <span id="email2Rules" class="rules">
+                            <span class="valueMissing vmsg none">Please enter an email address - if you don't do that I'll everybody...</span>
+                            <span class="typeMismatch vmsg none">You must not use special characters except . _ - +</span>
+                            <span class="isYahoo vmsg none">I don't like yahoo email addresses. So don't enter yahoo email addresses - thanks.</span>
+                        </span>
+                        <br />
+                        <label for="url2" class="floatLeft clear">Url</label>
+                        <input type="url" id="url2" name="url2" class="floatRight" placeholder="http://www.domain.com" title="Enter a URL" value="http://test.at"/>
+                        <span id="url2Rules" class="rules">
+                            <span class="typeMismatch vmsg none">You must enter a URL that begins with http://</span>
+                        </span>
+                        <br />
+                        <label for="meter1" class="floatLeft clear">Meter:</label>
+                        <meter id="meter1" min="1" max="31" value="5" class="floatRight">5th Day in Month</meter>
+                        <br />
+                        <label for="telephone2" class="floatLeft clear">Telephone</label>
+                        <input type="text" id="telephone2" name="telephone2" class="floatRight" placeholder="0664 4308641" pattern="[\d\s]{5,}" title="Enter your telephone number"/>
+                        <span id="telephone2Rules" class="rules">
+                            <span class="patternMismatch vmsg none">You must enter a telephone number that consists of numbers and whitespaces like 0664 4308641 or 0043 664 4308641 - don't use a # or () or -</span>
+                        </span>
+                        <br />
+                        <input type="button" id="checkValidation" name="checkValidation" value="validate" class="floatRight"/>
+                        <input type="submit" class="floatRight clear"/>
+                    </fieldset>
                 </form>
             </section>
         </article>
     </body>
+    <script>
+        var ruleNames = [];
+        $(function () {
+            //fills array with rule names (look for all elements of class 'vmsg'. The first class of each element is added to the rules array)
+            $(".vmsg").each(function (index, element) {
+                if (element.className.indexOf(" ") != -1){
+                    ruleNames[index] = element.className.split(" ")[0];
+                }
+            });
+
+            //attach validation events to all inputs in the fieldset with the id 'customErrorFieldset' that ar not buttons
+            $(":input:not(:button)").each(function () {
+                //this.invalid(validationFail);
+                this.addEventListener("invalid", validationFail);
+                this.onblur = validate;
+            });
+
+            //add eventhandler to button for manual validation
+            $("#checkValidation").click(validate);
+
+            //custom logic: Emails  must not be yahoo emails
+            function validateEmailYahoo() {
+                var mail = $("#email2")[0];
+
+                if (mail != null && mail != "") {
+                    if (mail.value.toLowerCase().indexOf("@yahoo") > -1) {
+                        mail.setCustomValidity("invalid");
+                        $("#email2Rules .isYahoo").removeClass("none");
+                    }
+                    else {
+                        mail.setCustomValidity('');
+                    }
+
+                }
+            }
+
+            //custom logic: Generic custom logic function
+            function validateCustomLogic() {
+                validateEmailYahoo();
+            }
+
+            //validate: First clear UI by hiding all custom errors. Then run the validation rules on the selected form
+            function validate() {
+                $(".vmsg").addClass("none");
+                validateCustomLogic();
+                $("#customErrorForm")[0].checkValidity();
+            }
+
+            //check each input element to determine the invalid element. When the invalid element is found we loop through the ruleNames array to detect which rule has been broken in order to display the error message accordingly.
+            function validationFail(e) {
+                var element = e.srcElement;
+                var validity = element.validity;
+                var id = element.id;
+
+                if (!validity.valid) {
+                    for (var i = 0; i < ruleNames.length; i++) {
+                        checkRule(validity, ruleNames[i], id)
+                    }
+
+                    e.preventDefault;
+                }
+            }
+
+            //uses the instance of the input element's validityState object to run a validation rule. the evalutation return true the rule is broken and the apropriate message displayed.
+            function checkRule(validity, ruleName, id) {
+                if (eval("validity." + ruleName)) {
+                    //pattern: '#emailRules .valueMissing'
+                    $("#" + id + "Rules ." + ruleName).removeClass("none");
+                }
+            }
+        });
+    </script>
 </html>

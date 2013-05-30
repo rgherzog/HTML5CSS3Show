@@ -110,6 +110,17 @@ header h1
     font-size: 2em;
 }
 
+header h2
+{
+    font-weight: 500;
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+    color: #f9f9f9;
+    border: none;
+    line-height: 1.5em;
+    font-size: 1.5em;
+}
+
 article
 {
     padding: 0px 12px;
@@ -419,4 +430,7 @@ section#menu a {
 header > div{
     font-size: 14px;
     color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
 }

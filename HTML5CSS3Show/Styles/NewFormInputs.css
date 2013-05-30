@@ -1,11 +1,62 @@
 ﻿@charset 'utf-8';
 
-/****form input***/
+section.floatLeft{
+    float:left;
+    width:600px;
+}
+
+.floatRight{
+    margin-right: 200px;
+}
+
+section.floatLeft + section{
+    margin-left: 100px;
+}
+
+fieldset {
+    position: relative;
+}
+
+/*show custom error messages*/
+input:valid + .invalid{ /*the element of class "invalid" is hidden if it is next to a valid input field*/
+    visibility: hidden;
+}
+
+input:invalid + .invalid { /*the other way round*/
+    visibility:visible;
+}
+
+.invalid, .rules > span{
+    border: 3px solid red;
+    border-radius: 5px;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    width: 180px;
+    padding: 5px;
+    background-color: lightgray;
+}
+
+/*the order of these pseudo classes is importat. Those below take precedence*/
+input{
+    border: 3px solid #b6b7bc;
+    border-radius: 5px;
+}
+input:focus{
+    background-color:  rgba(255,255,255, 0.8);
+    border: 3px solid #b6ff00;
+    border-radius: 5px;
+}
+input:valid{
+    background-color: white;
+}
 input:required {
     background-color: #eee;
 }
+input:invalid{
+    background-color: red;
+}
 
-input:focus{
-    background-color:  rgba(255,255,255, 0.8);
-    border: 3px solid red;
+.none{
+    visibility: hidden;
 }
