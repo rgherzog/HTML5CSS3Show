@@ -1,0 +1,9 @@
+﻿article > section{
+    float: left;
+    margin: 20px;
+    width: 230px;
+}
+
+#resultMovieDb img {
+    cursor: pointer;
+}

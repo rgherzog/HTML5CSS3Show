@@ -43,9 +43,11 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AjaxWebServices\AjaxWebServices.htm" />
     <Content Include="Content\audio\beach-wave-01.mp3" />
     <Content Include="Content\audio\beach-wave-01.wav" />
     <Content Include="Content\audio\donner.mp3" />
@@ -62,8 +64,32 @@
     <Content Include="offlineApplication\journal.aspx" />
     <Content Include="offlineApplication\fallback.aspx" />
     <Content Include="offlineApplication\manifest.aspx" />
+    <Content Include="Scripts\AjaxWebServices.js" />
     <Content Include="Scripts\jquery-1.10.0.min.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3-js\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3-js\jquery-ui-1.10.3.custom.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3-js\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="Scripts\jquery-ui.js" />
     <Content Include="Scripts\WebSocket.js" />
+    <Content Include="Styles\AjaxWebServices.css" />
+    <Content Include="Styles\jquery-ui-1.10.3-css\ui-lightness\images\animated-overlay.gif" />
+    <Content Include="Styles\jquery-ui-1.10.3-css\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Styles\jquery-ui-1.10.3-css\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Styles\jquery-ui-1.10.3-css\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Styles\jquery-ui-1.10.3-css\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Styles\jquery-ui-1.10.3-css\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Styles\jquery-ui-1.10.3-css\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Styles\jquery-ui-1.10.3-css\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Styles\jquery-ui-1.10.3-css\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Styles\jquery-ui-1.10.3-css\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Styles\jquery-ui-1.10.3-css\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Styles\jquery-ui-1.10.3-css\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Styles\jquery-ui-1.10.3-css\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Styles\jquery-ui-1.10.3-css\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Styles\jquery-ui-1.10.3-css\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Styles\jquery-ui-1.10.3-css\ui-lightness\jquery-ui-1.10.3.custom.css" />
+    <Content Include="Styles\jquery-ui-1.10.3-css\ui-lightness\jquery-ui-1.10.3.custom.min.css" />
+    <Content Include="Styles\jquery-ui.css" />
     <Content Include="Styles\OfflineApplication.css" />
     <Content Include="Styles\WebSocket.css" />
     <Content Include="WebSockets.htm" />
@@ -95,6 +121,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AjaxWebServices\YahooWeatherLocalProxy.ashx.cs">
+      <DependentUpon>YahooWeatherLocalProxy.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxWebServices\TextualWebService.ashx.cs">
+      <DependentUpon>TextualWebService.ashx</DependentUpon>
+    </Compile>
     <Compile Include="offlineApplication\journal.aspx.cs">
       <DependentUpon>journal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -127,6 +159,9 @@
     <Content Include="Content\fonts\Quicksand_Book_Oblique.otf" />
     <Content Include="Content\fonts\Quicksand_Dash.otf" />
     <Content Include="Content\fonts\Quicksand_Light_Oblique.otf" />
+    <Content Include="AjaxWebServices\TextualWebService.ashx" />
+    <Content Include="AjaxWebServices\YahooWeatherLocalProxy.ashx" />
+    <Content Include="Styles\jquery-ui-1.10.3-css\ui-lightness\images\Thumbs.db" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

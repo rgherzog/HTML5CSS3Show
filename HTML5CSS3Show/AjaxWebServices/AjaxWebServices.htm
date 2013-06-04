@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Work with WebService and Ajax</title>
+        <link rel="stylesheet" href="../Styles/Site.css" media="screen" />
+        <script src="../Scripts/jquery-1.10.0.min.js"></script>
+        <script src="../Scripts/AjaxWebServices.js"></script>
+        <link href="../Styles/AjaxWebServices.css" rel="stylesheet" />
+        <link href="../Styles/jquery-ui-1.10.3-css/ui-lightness/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" />
+        <script src="../Scripts/jquery-ui-1.10.3-js/jquery-ui-1.10.3.custom.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <hgroup>
+                <h1>
+                    Work with WebService and Ajax
+                </h1>
+            </hgroup>
+            <div>                
+            </div>
+        </header>
+        <article>
+            <section class="floatLeft">
+                <h1>Local Textual WebService with JavaScript</h1>
+                <input type="text" id="textBoxTextService" />
+                <input type="button" id="buttonTextService" value="query for text" />
+                <div id="resultTextService"></div>
+            </section>
+            <section class="floatLeft">
+                <h1>Yahoo Weather WebService with jQuery (using Yahoo Pipes)</h1>
+                <div>With Yahoo pipes a rss+xml response is converted into a JSON object</div>
+                <input type="button" id="buttonWeather" value="the current weather for Linz/Austria" />
+                <div id="resultWeather"></div>
+            </section>
+            <section class="floatLeft">
+                <h1>WebService with jQuery (using JSONP)</h1>
+                <input type="button" id="buttonTwitter" value="the latest 20 tweets from that one guy" />
+                <ul id="resultTwitter"></ul>
+            </section>
+            <section class="floatLeft">
+                <h1>Yahoo Weather WebService with JavaScript</h1>
+                <input type="button" id="buttonWeatherJavaScript" value="the current weather for Linz/Austria" />
+                <div id="resultWeatherJavaScript"></div>
+            </section>
+            <section class="floatLeft">
+                <h1>Posters for movies from themoviedb.org</h1>
+                <input type="text" id="textMovieDb" />
+                <input type="button" id="buttonMovieDb" value="start search!" />
+                <div id="resultMovieDb">
+                    Type the name of the movie and you'll find the poster to the movie here!
+                </div>
+                <div id="dialog-modal" title="The big poster"></div>
+            </section>
+        </article>
+    </body>    
+</html>
