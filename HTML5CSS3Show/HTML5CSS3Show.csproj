@@ -72,6 +72,8 @@
     <Content Include="Scripts\jquery-ui.js" />
     <Content Include="Scripts\WebSocket.js" />
     <Content Include="Styles\AjaxWebServices.css" />
+    <Content Include="FlexBoxLayout.htm" />
+    <Content Include="Styles\FlexBoxLayout.css" />
     <Content Include="Styles\jquery-ui-1.10.3-css\ui-lightness\images\animated-overlay.gif" />
     <Content Include="Styles\jquery-ui-1.10.3-css\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
     <Content Include="Styles\jquery-ui-1.10.3-css\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
